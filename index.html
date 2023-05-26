@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoCrypt</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link type="image/png" sizes="96x96" rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
+</head>
+
+<body>
+    <div class="divlogo">
+        <img class="logovector" src="images/Logo.svg" alt="">
+    </div>
+    <div class="frame3">
+        <!--a class="crypt" href="">Encriptar</a-->
+        <!--a class="descrypt" href="">Desencriptar</a-->
+        <button class="crypt">
+            Encriptar
+        </button>
+        <button class="descrypt">
+            Desencriptar
+        </button>
+    </div>
+
+    <textarea autofocus rows="9" autocorect="on" class="fake-textarea"
+        placeholder="Escribe el mensaje a encriptar o desencriptar"></textarea>
+    <!--textarea placeholder="Escribe el texto aquí..." class="fake-textarea" maxlength=255></textarea-->
+    <!--div class="rectangulo" id="divRectangulo"-->
+    <script>
+        function copyClipboard(element) {
+          var $bridge = $("<input>")
+          $("body").append($bridge);
+          $bridge.val($(element).text()).select();
+          document.execCommand("copy");
+          $bridge.remove();
+          $(".copy2").attr("title", "Texto copiado al portapapeles");
+        }
+        </script>
+    <button onclick="copyClipboard('.noencontrado')" class="copy2">
+        <i class="fa-solid fa-copy fa-lg" style="color: #6e80a0;"></i>
+    </button>
+
+    <div class="rectangulo">
+        <img class="muñeco" src="images/Muñeco.svg" alt="">
+        <p class="noencontrado">Ningún mensaje fue encontrado</p>
+        <p class="noencontrado2">Ingresa el texto que desees encriptar o desencriptar.</p>
+
+
+    </div>
+
+
+    <!--/div-->
+
+
+
+
+    <div class="frame1">
+        <img class="imgexlamacion" src="images/bi_exclamation-circle-fill.svg" alt="">
+        <p class="notildes">Solo letras minúsculas y sin tildes</p>
+    </div>
+    <!--footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="images/Logo.svg" alt="Logo myself">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>Sobre Nosotros</h2>
+                <p>Lore ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsa?</p>
+                <p>Lore ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsa?</p>
+            </div>
+            <div class="box">
+                <h2>Follow me!</h2>
+                <div class="red-social">
+                    <a href="#" class="fa-brands fa-facebook"></a>
+                    <a href="#" class="fa-brands fa-instagram"></a>
+                    <a href="#" class="fa-brands fa-twitter"></a>
+                    <a href="#" class="fa-brands fa-linkedin"></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2021 <b>MySelf</b> - Todos los derechos Reservados.</small>
+        </div>
+    </footer-->
+</body>
+<script src="script.js"></script>
+
+</html>
