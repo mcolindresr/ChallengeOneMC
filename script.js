@@ -97,6 +97,9 @@ $(document).ready(function () {
       $(".noencontrado2").css("display", "none");
       $(".muñeco").css("display", "none");
       $(".copy2").css("display", "block");
+      $(".copy2").css("top", "6rem");
+      
+
       if (texto == '') {
         $(".noencontrado").text("Ningún mensaje fue encontrado")
         $(".noencontrado2").css("display", "block");
